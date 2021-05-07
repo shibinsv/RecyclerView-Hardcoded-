@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@+id/profileCaption"
+        app:layout_constraintEnd_toStartOf="@+id/profileName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile"
+            android:layout_width="40sp"
+            android:layout_height="43dp"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="0dp"
+        android:layout_height="20sp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:textColor="#0A0A0A"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4a"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/profileTimeAgo"
+        android:layout_width="130dp"
+        android:layout_height="23dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toTopOf="@+id/postedImage"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4a"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/profileName"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <ImageView
+        android:id="@+id/imageView4a"
+        android:layout_width="25sp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/three_dot"
+        app:layout_constraintBottom_toBottomOf="@+id/profileTimeAgo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profileName"
+        app:layout_constraintTop_toTopOf="@+id/profileName"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+
+    <TextView
+        android:id="@+id/profileCaption"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:textColor="#656565"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileTimeAgo" />
+
+    <ImageView
+        android:id="@+id/postedImage"
+        android:layout_width="411dp"
+        android:layout_height="270dp"
+        android:contentDescription="TODO"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileName"
+        app:layout_constraintVertical_bias="0.401"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+    <TextView
+        android:id="@+id/viewsCount"
+        android:layout_width="100dp"
+        android:layout_height="20sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:textColor="#949494"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/postedUpdate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/postedImage"
+        app:layout_constraintTop_toBottomOf="@+id/postedImage"
+        app:layout_constraintVertical_bias="0.037"/>
+
+    <TextView
+        android:id="@+id/postedUpdate"
+        android:layout_width="80dp"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/button3a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/button3a"
+        app:layout_constraintTop_toBottomOf="@+id/postedImage"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <Button
+        android:id="@+id/button2a"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:background="@drawable/infinite_loops"
+        app:backgroundTint="@color/icon_share"
+        app:layout_constraintBottom_toBottomOf="@+id/buttona"
+        app:layout_constraintEnd_toStartOf="@+id/button4a"
+        app:layout_constraintHorizontal_bias="0.781"
+        app:layout_constraintStart_toEndOf="@+id/buttona"
+        app:layout_constraintTop_toTopOf="@+id/buttona" />
+
+    <Button
+        android:id="@+id/button4a"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:background="@drawable/comment"
+        app:backgroundTint="@color/icon_share"
+        app:layout_constraintBottom_toBottomOf="@+id/button2a"
+        app:layout_constraintEnd_toStartOf="@+id/button3a"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toEndOf="@+id/viewsCount"
+        app:layout_constraintTop_toTopOf="@+id/button2a"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttona"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/share"
+        app:backgroundTint="@color/icon_share"
+        app:layout_constraintBottom_toTopOf="@+id/shareNumber"
+        app:layout_constraintEnd_toStartOf="@+id/button2a"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewsCount"
+        tools:targetApi="lollipop" />
+
+
+    <Button
+        android:id="@+id/button3a"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/download"
+        app:backgroundTint="@color/icon_share"
+        app:layout_constraintBottom_toBottomOf="@+id/button4a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button4a"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/shareNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/buttona"
+        app:layout_constraintStart_toStartOf="@+id/buttona"
+        app:layout_constraintTop_toBottomOf="@+id/buttona" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/commentNumber"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/button4a"
+        app:layout_constraintStart_toStartOf="@+id/button4a"
+        app:layout_constraintTop_toBottomOf="@+id/button4a" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loopNumber"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/button2a"
+        app:layout_constraintStart_toStartOf="@+id/button2a"
+        app:layout_constraintTop_toBottomOf="@+id/button2a" />
+
+    <TextView
+        android:id="@+id/download"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/download"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/button3a"
+        app:layout_constraintStart_toStartOf="@+id/button3a"
+        app:layout_constraintTop_toBottomOf="@+id/button3a"
+        tools:ignore="SmallSp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/under"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
