@@ -1,0 +1,3 @@
+# RecyclerView-Hardcoded-
+
+Hardcoded recycler view that givees us an idea of how recycler works....
